@@ -81,11 +81,11 @@
 
   const  items =  ref([
            { title: 'Dashboard', icon: 'mdi-view-dashboard', path: '/' },
+           { title: 'Home', icon: 'mdi-information', path: '/HomeView'},
            { title: 'Calculator', icon: 'mdi-calculator-variant', path: '/basicMath' },
            { title: 'String App', icon: 'mdi-arrow-decision', path: '/stringApp'},
            { title: 'About Me', icon: 'mdi-account-box', path: '/aboutMe'},
            { title: 'Quiz App', icon: 'mdi-atom', path: '/QuizView'},
-           { title: 'Home', icon: 'mdi-information', path: '/HomeView'},
         ])
 
  function toggleDrawer(){
