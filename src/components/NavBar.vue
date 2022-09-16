@@ -3,7 +3,7 @@
       <v-toolbar app>
        <v-app-bar-nav-icon @click='toggleDrawer'></v-app-bar-nav-icon>
       <v-toolbar-title >
-        <span>Midterm Project </span>
+        <span>Final Laboratory 1 </span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
