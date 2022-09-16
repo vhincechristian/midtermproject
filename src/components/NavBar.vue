@@ -31,9 +31,7 @@
       </v-list>
     </v-menu>
 
-      <v-btn flat color="primary">
-        <a href="https://www.tip.edu.ph/" target="_blank"> TIP Official Website </a>
-      </v-btn>
+      <v-btn  @click="handleSignOut" v-if="isLoggedIn" color="black" dark> Log Out </v-btn>
       
       
       </v-toolbar>
@@ -54,6 +52,30 @@
 
 <script setup>
   import { ref } from 'vue'
+  import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+  import { onMounted } from "vue";
+  import router from "../router";
+
+   const isLoggedIn = ref(false);
+
+   let auth;
+   onMounted(() => {
+     auth = getAuth();
+     onAuthStateChanged(auth, (user) => {
+       if (user) {
+         isLoggedIn.value = true;
+       } else {
+         isLoggedIn.value = false;
+       }
+     });
+   });
+
+  const handleSignOut = () => {
+     signOut(auth).then(() => {
+       router.push("/signin");
+       alert("User logged out.");
+     });
+   };
     
   const drawer = ref(false)
 

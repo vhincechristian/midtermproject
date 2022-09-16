@@ -9,6 +9,7 @@ import modal from "../components/modal.vue"
 import HomeView from "../views/HomeView.vue"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import RegisterView from "../views/RegisterView.vue"
+import SignInView from "../views/SignInView.vue"
 
 
 const router = createRouter({
@@ -24,13 +25,13 @@ const router = createRouter({
         },
 
         {
-            path: '/RegisterView',
+            path: '/register',
             name: 'register',
             component: RegisterView
         },
 
         {
-            path: '/SignInView',
+            path: '/signin',
             name: 'signin',
             component: SignInView
         },
@@ -121,7 +122,7 @@ router.beforeEach(async(to, from, next) => {
             next();
         } else {
             alert("User must be logged in first!");
-            next("/signin");
+            next("/register");
         }
     } else {
         next();
