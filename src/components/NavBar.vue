@@ -63,7 +63,7 @@
            { title: 'String App', icon: 'mdi-arrow-decision', path: '/stringApp'},
            { title: 'About Me', icon: 'mdi-account-box', path: '/aboutMe'},
            { title: 'Quiz App', icon: 'mdi-atom', path: '/QuizView'},
-           { title: 'About Apps', icon: 'mdi-information', path: '/AboutAppsView'},
+           { title: 'Home', icon: 'mdi-information', path: '/HomeView'},
         ])
 
  function toggleDrawer(){

@@ -6,7 +6,7 @@ import AboutMeView from '../views/AboutMeView.vue'
 import QuizView from '../views/QuizView.vue'
 import quizapp from "../components/quizapp.vue"
 import modal from "../components/modal.vue"
-import AboutAppsView from "../views/AboutAppsView.vue"
+import HomeView from "../views/HomeView.vue"
 
 
 const router = createRouter({
@@ -55,9 +55,9 @@ const router = createRouter({
         },
 
         {
-            path: '/AboutAppsView',
-            name: 'AboutApps',
-            component: AboutAppsView
+            path: '/HomeView',
+            name: 'Home',
+            component: HomeView
         },
 
     ]
