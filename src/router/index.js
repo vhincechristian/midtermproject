@@ -10,7 +10,7 @@ import HomeView from "../views/HomeView.vue"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import RegisterView from "../views/RegisterView.vue"
 import SignInView from "../views/SignInView.vue"
-import QuizHistoryView from "../views/QuizHistoryView.vue"
+
 
 const router = createRouter({
     history: createWebHistory(
@@ -94,15 +94,6 @@ const router = createRouter({
             path: '/HomeView',
             name: 'Home',
             component: HomeView,
-            meta: {
-                requiresAuth: true,
-            },
-        },
-
-        {
-            path: '/QuizHistoryView',
-            name: 'QuizHistory',
-            component: QuizHistoryView,
             meta: {
                 requiresAuth: true,
             },
