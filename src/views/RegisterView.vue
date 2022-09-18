@@ -1,9 +1,24 @@
 <template>
-    <h1>Create An Account</h1>
-    <p><input type="text" playceholder="Email" v-model="email"/></p>
-    <p><input type="password" playceholder="Password" v-model="password"/></p>
-    <p><button @click="register">Submit</button></p>
-    <p><button @click="signInWithGoogle">Sign In With Google</button></p>
+   <v-card class="ma-5 mx-auto mx-auto text-black" max-width="600">
+      <v-card-title alignment="center">Register an Account</v-card-title>
+      <v-form>
+                <v-text-field
+                              outline
+                              label="Username"
+                              type="text"
+                              placeholder="Email"
+                              v-model="email"></v-text-field>
+                <v-text-field
+                              outline
+                              hide-details
+                              label="Password"
+                              type="password"
+                              placeholder="Password"
+                              v-model="password"></v-text-field>
+              </v-form>
+    <v-btn><button @click="register">Submit</button></v-btn>
+    <v-btn><button @click="signInWithGoogle">Sign In With Google</button></v-btn>
+    </v-card>
 </template>
 
 <script setup>

@@ -9,10 +9,8 @@
 
 <script setup>
   import Navbar from '@/components/NavBar.vue';
-
-
    import { onMounted, ref } from "vue";
-   import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+   import { getAuth, onAuthStateChanged } from "firebase/auth";
    import { useRouter } from "vue-router";
    import router from "./router";
    const isLoggedIn = ref(false);
@@ -29,12 +27,7 @@
      });
    });
    
-   const handleSignOut = () => {
-     signOut(auth).then(() => {
-       router.push("/signin");
-       alert("User logged out.");
-     });
-   };
+  
    </script>
 
 <style lang="css">
