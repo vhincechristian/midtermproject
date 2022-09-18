@@ -42,7 +42,7 @@
   
 <script>
 import DataService from "../services/DataService";
-import { useStore } from "vuex";
+
 import { useRouter } from "vue-router";
 import { computed } from "vue";
 import { auth } from '../firebase'
