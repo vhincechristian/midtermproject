@@ -99,6 +99,15 @@ const router = createRouter({
             },
         },
 
+        {
+            path: '/QuizHistoryView',
+            name: 'QuizHistory',
+            component: QuizHistoryView,
+            meta: {
+                requiresAuth: true,
+            },
+        },
+
     ]
 })
 
